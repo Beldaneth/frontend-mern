@@ -7,8 +7,8 @@ import {login, reset} from '../features/auth/authSlice'
 import Spinner from './Spinner'
 
 const Login = () => {
-    const [formData, setFormData] = useState({ email: '', password: '' });
-    const { email, password } = formData;
+    const [formData, setFormData] = useState({ email: '', password: '' })
+    const { email, password } = formData
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
@@ -24,15 +24,15 @@ const Login = () => {
         setFormData(prevState => ({
             ...prevState,
             [e.target.name]: e.target.value
-        }));
-    };
+        }))
+    }
 
     const onSubmit = e => {
-        e.preventDefault();
+        e.preventDefault()
         const userData = {email, password}
         dispatch(login(userData))
         // Add your form submission logic here
-    };
+    }
 
     return (
         isLoading ? <Spinner /> : (
@@ -57,7 +57,7 @@ const Login = () => {
     </section>
 </>
         )
-    );
-};
+    )
+}
 
-export default Login;
+export default Login
