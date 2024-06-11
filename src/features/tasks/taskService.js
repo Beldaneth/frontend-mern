@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = '/api/tasks/'
+const API_URL = 'https://mernbackend-ghuis010.b4a.run/api/tasks/'
 
 const createTask = async (taskData, token) => {
     const config = {
